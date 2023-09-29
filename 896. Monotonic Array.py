@@ -1,3 +1,24 @@
+" In Python "
+class Solution(object):
+    def isMonotonic(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: bool
+        """
+        increasing = True
+        decreasing = True
+
+        for i in range(len(nums) - 1):
+            if nums[i] > nums[i + 1]:
+                increasing = False
+            elif nums[i] < nums[i + 1]:
+                decreasing = False
+
+        return increasing or decreasing
+
+s=Solution()
+print(s.isMonotonic([1,2,2,3,4]))
+
 """
 #include<stdio.h>
 #include<conio.h>
@@ -40,25 +61,3 @@ int main()
     return 0;
 }
 """
-
-
-" In Python "
-class Solution(object):
-    def isMonotonic(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: bool
-        """
-        increasing = True
-        decreasing = True
-
-        for i in range(len(nums) - 1):
-            if nums[i] > nums[i + 1]:
-                increasing = False
-            elif nums[i] < nums[i + 1]:
-                decreasing = False
-
-        return increasing or decreasing
-
-s=Solution()
-print(s.isMonotonic([1,2,2,3,4]))
