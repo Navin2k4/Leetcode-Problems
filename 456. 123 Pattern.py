@@ -1,9 +1,6 @@
 class Solution(object):
     def find132pattern(self, nums):
         n = len(nums)
-        if n < 3:
-            return False
-
         stack = []
         min_array = [nums[0]]
 
