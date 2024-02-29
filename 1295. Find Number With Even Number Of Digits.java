@@ -23,6 +23,6 @@ class Solution {
         Solution sol = new Solution();
         int[] nums = { 12, 345, 2, 6, 7896 };
         int evenCount = sol.findNumbers(nums);
-        System.out.println("The number of integers with even number of digits is: " + evenCount);
+        System.out.println(evenCount);
     }
 }
