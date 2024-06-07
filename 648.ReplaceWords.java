@@ -5,8 +5,8 @@ import java.util.List;
 class Solution {
     public String replaceWords(List<String> dictionary, String sentence) {
         String[] dict = dictionary.toArray(new String[0]);
-        Arrays.sort(dict, Comparator.comparingInt(String::length));//33ms
-        sortDictionaryByLength(dict); // 35ms
+        Arrays.sort(dict, Comparator.comparingInt(String::length)); //3ms
+        sortDictionaryByLength(dict); // 5ms
         String[] words = sentence.split(" ");
         StringBuilder result = new StringBuilder();
         for (String word : words) {
